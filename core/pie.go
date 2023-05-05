@@ -1,6 +1,14 @@
 package core
 
-// TODO: think about how we want to pass data, every data point should have a caption
-func (i Isrke) Pie(d ...interface{}) string {
+type PieEntry struct {
+	Caption string
+	Data    int
+}
+
+func (i Isrke) Pie(d ...PieEntry) string {
+	total := 0
+	for _, e := range d {
+		total += e.Data
+	}
 	return ""
 }
