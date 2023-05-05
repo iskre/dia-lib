@@ -1,16 +1,22 @@
 # lib
 
-ascii generation library for the iskre cli tool 
+ascii generation library for the iskre cli tool
 
 ## Features
 
 - [ ] pie chart
 - [ ] ven diagram
+- [ ] control flow diagrams
+  - [x] sequence diagram
+  - [ ] condition diagram
+  - [ ] repetition diagram
 - [ ] flow chart
 - [ ] tables
 - [ ] mind map
 - [ ] state diagram
 - [ ] gannt diagram
+
+## Showcase
 
 ## Setup
 
