@@ -1,4 +1,4 @@
-package core
+package helper
 
 const TABLE_TOP_LEFT = '┌'
 const TABLE_TOP_RIGHT = '┐'

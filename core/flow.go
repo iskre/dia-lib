@@ -1,7 +1,10 @@
 // contains control flow diagrams
 package core
 
-import "strings"
+import (
+	"github.com/iskre/lib/helper"
+	"strings"
+)
 
 // generates a Repetition diagram:
 //
@@ -17,7 +20,7 @@ import "strings"
 //	    │  │  test                      │
 //	    └──┴────────────────────────────┘
 func (i Iskre) Repetition(head, body string) string {
-	// keep track of the longest string, to resize the tableccordingly
+	// keep track of the longest string, to resize the table accordingly
 	m := 0
 	if len(head) > len(body) {
 		m = len(head)
@@ -39,57 +42,57 @@ func (i Iskre) Repetition(head, body string) string {
 	b := strings.Builder{}
 
 	// top
-	b.WriteRune(TABLE_TOP_LEFT)
-	b.WriteString(strings.Repeat(string(TABLE_HORIZONTAL), m+3))
-	b.WriteRune(TABLE_TOP_RIGHT)
+	b.WriteRune(helper.TABLE_TOP_LEFT)
+	b.WriteString(strings.Repeat(string(helper.TABLE_HORIZONTAL), m+3))
+	b.WriteRune(helper.TABLE_TOP_RIGHT)
 
 	// head
 	b.WriteRune('\n')
-	b.WriteRune(TABLE_VERTICAL)
+	b.WriteRune(helper.TABLE_VERTICAL)
 	b.WriteString("  ")
 	b.WriteString(head)
 	b.WriteString(strings.Repeat(" ", m-(len(head)-1)))
-	b.WriteRune(TABLE_VERTICAL)
+	b.WriteRune(helper.TABLE_VERTICAL)
 
 	// bar between head and body
 	b.WriteRune('\n')
-	b.WriteRune(TABLE_VERTICAL)
+	b.WriteRune(helper.TABLE_VERTICAL)
 	b.WriteString("  ")
-	b.WriteRune(TABLE_TOP_LEFT)
-	b.WriteString(strings.Repeat(string(TABLE_HORIZONTAL), m))
-	b.WriteRune(TABLE_INTERSECTION_RIGHT)
+	b.WriteRune(helper.TABLE_TOP_LEFT)
+	b.WriteString(strings.Repeat(string(helper.TABLE_HORIZONTAL), m))
+	b.WriteRune(helper.TABLE_INTERSECTION_RIGHT)
 
 	// body
 	if strings.ContainsRune(body, '\n') {
 		for _, e := range strings.Split(body, "\n") {
 			b.WriteRune('\n')
-			b.WriteRune(TABLE_VERTICAL)
+			b.WriteRune(helper.TABLE_VERTICAL)
 			b.WriteString("  ")
-			b.WriteRune(TABLE_VERTICAL)
+			b.WriteRune(helper.TABLE_VERTICAL)
 			b.WriteString("  ")
 			b.WriteString(e)
 			b.WriteString(strings.Repeat(" ", m-(len(e)+2)))
-			b.WriteRune(TABLE_VERTICAL)
+			b.WriteRune(helper.TABLE_VERTICAL)
 		}
 	} else {
 		b.WriteRune('\n')
-		b.WriteRune(TABLE_VERTICAL)
+		b.WriteRune(helper.TABLE_VERTICAL)
 		b.WriteString("  ")
-		b.WriteRune(TABLE_VERTICAL)
+		b.WriteRune(helper.TABLE_VERTICAL)
 		b.WriteString("  ")
 		b.WriteString(body)
 		b.WriteString(strings.Repeat(" ", m-(len(body)+2)))
-		b.WriteRune(TABLE_VERTICAL)
+		b.WriteRune(helper.TABLE_VERTICAL)
 	}
 
 	// bottom
 	b.WriteRune('\n')
-	b.WriteRune(TABLE_BOTTOM_LEFT)
-	b.WriteRune(TABLE_HORIZONTAL)
-	b.WriteRune(TABLE_HORIZONTAL)
-	b.WriteRune(TABLE_INTERSECTION_BOTTOM)
-	b.WriteString(strings.Repeat(string(TABLE_HORIZONTAL), m))
-	b.WriteRune(TABLE_BOTTOM_RIGHT)
+	b.WriteRune(helper.TABLE_BOTTOM_LEFT)
+	b.WriteRune(helper.TABLE_HORIZONTAL)
+	b.WriteRune(helper.TABLE_HORIZONTAL)
+	b.WriteRune(helper.TABLE_INTERSECTION_BOTTOM)
+	b.WriteString(strings.Repeat(string(helper.TABLE_HORIZONTAL), m))
+	b.WriteRune(helper.TABLE_BOTTOM_RIGHT)
 	return b.String()
 }
 
@@ -120,29 +123,29 @@ func (i Iskre) Sequence(d ...string) string {
 
 	b := strings.Builder{}
 
-	b.WriteRune(TABLE_TOP_LEFT)
-	b.WriteString(strings.Repeat(string(TABLE_HORIZONTAL), m))
-	b.WriteRune(TABLE_TOP_RIGHT)
+	b.WriteRune(helper.TABLE_TOP_LEFT)
+	b.WriteString(strings.Repeat(string(helper.TABLE_HORIZONTAL), m))
+	b.WriteRune(helper.TABLE_TOP_RIGHT)
 
 	for i, e := range d {
 		b.WriteRune('\n')
-		b.WriteRune(TABLE_VERTICAL)
+		b.WriteRune(helper.TABLE_VERTICAL)
 		b.WriteString("  ")
 		b.WriteString(e)
 		b.WriteString(strings.Repeat(" ", m-(len(e)+2)))
-		b.WriteRune(TABLE_VERTICAL)
+		b.WriteRune(helper.TABLE_VERTICAL)
 		if i+1 < len(d) {
 			b.WriteRune('\n')
-			b.WriteRune(TABLE_INTERSECTION_LEFT)
-			b.WriteString(strings.Repeat(string(TABLE_HORIZONTAL), m))
-			b.WriteRune(TABLE_INTERSECTION_RIGHT)
+			b.WriteRune(helper.TABLE_INTERSECTION_LEFT)
+			b.WriteString(strings.Repeat(string(helper.TABLE_HORIZONTAL), m))
+			b.WriteRune(helper.TABLE_INTERSECTION_RIGHT)
 		}
 	}
 
 	b.WriteRune('\n')
-	b.WriteRune(TABLE_BOTTOM_LEFT)
-	b.WriteString(strings.Repeat(string(TABLE_HORIZONTAL), m))
-	b.WriteRune(TABLE_BOTTOM_RIGHT)
+	b.WriteRune(helper.TABLE_BOTTOM_LEFT)
+	b.WriteString(strings.Repeat(string(helper.TABLE_HORIZONTAL), m))
+	b.WriteRune(helper.TABLE_BOTTOM_RIGHT)
 
 	return b.String()
 }
