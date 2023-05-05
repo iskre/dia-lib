@@ -11,6 +11,22 @@ type Table struct {
 	Body    [][]string
 }
 
+// generates a table
+//
+//	    i := core.Iskre{}
+//		fmt.Println(i.Table(&core.Table{
+//		Headers: []string{"First", "Second", "Third"},
+//		Body: [][]string{
+//			{"Test1", "Test2", "Test3"},
+//			{"Test1", "Test2", "Test3"},
+//		},
+//		}))
+//		┌─────────────┬──────────────┬─────────────┐
+//		│    First    │    Second    │    Third    │
+//		├─────────────┼──────────────┼─────────────┤
+//		│ Test1       │ Test2        │ Test3       │
+//		│ Test1       │ Test2        │ Test3       │
+//		└─────────────┴──────────────┴─────────────┘
 func (i Iskre) Table(d *Table) string {
 	// TODO: add check for body length
 	// m = max length for full row

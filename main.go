@@ -8,9 +8,13 @@ import (
 
 func main() {
 	i := core.Iskre{}
-	// fmt.Println(i.Repetition("While loop conditiontest", "test\n test\n  test\ntest"))
-	// fmt.Println(i.Sequence("test short", "test very very very very very very very very very very very very very very very very long", "..."))
+	fmt.Println("Repetition example: ")
+	fmt.Println(i.Repetition("While loop conditiontest", "test\n test\n  test\ntest"))
 
+	fmt.Println("Sequence example:")
+	fmt.Println(i.Sequence("test short", "test very very very very very very very very very very very very very very very very long", "..."))
+
+	fmt.Println("Pie chart example:")
 	fmt.Println(i.Pie(&core.PieEntry{
 		Caption: "1",
 		Data:    33,
@@ -24,8 +28,9 @@ func main() {
 		Data:    50,
 	}))
 
+	fmt.Println("Table example:")
 	fmt.Println(i.Table(&core.Table{
-		Headers: []string{"First", "Second", "Third"},
+		Headers: []string{"THE FIRST IS VERY LONG", "Second", "THE THIRD ALSO"},
 		Body: [][]string{
 			{"Test1", "Test2", "Test3"},
 			{"Test1", "Test2", "Test3"},
