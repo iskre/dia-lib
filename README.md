@@ -9,7 +9,7 @@ ascii generation library for the iskre cli tool
 - [ ] control flow diagrams
   - [x] sequence diagram
   - [ ] condition diagram
-  - [ ] repetition diagram
+  - [x] repetition diagram
 - [ ] flow chart
 - [ ] tables
 - [ ] mind map
