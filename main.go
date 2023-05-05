@@ -7,8 +7,23 @@ import (
 )
 
 func main() {
-	i := core.Isrke{}
-	fmt.Println(i.Sequence("First", "Second", "Third", "massive long Sequence"))
+	i := core.Iskre{}
+	// fmt.Println(i.Repetition("While loop conditiontest", "test\n test\n  test\ntest"))
+	// fmt.Println(i.Sequence("test short", "test very very very very very very very very very very very very very very very very long", "..."))
+
+	fmt.Println(i.Pie(&core.PieEntry{
+		Caption: "1",
+		Data:    33,
+	}, &core.PieEntry{
+
+		Caption: "2",
+		Data:    33,
+	}, &core.PieEntry{
+
+		Caption: "3",
+		Data:    50,
+	}))
+
 	fmt.Println(i.Table(&core.Table{
 		Headers: []string{"First", "Second", "Third"},
 		Body: [][]string{
@@ -16,15 +31,4 @@ func main() {
 			{"Test1", "Test2", "Test3"},
 		},
 	}))
-
-	// i.Pie(&core.PieEntry{
-	// 	Caption: "1",
-	// 	Data:    33,
-	// }, &core.PieEntry{
-	// 	Caption: "2",
-	// 	Data:    33,
-	// }, &core.PieEntry{
-	// 	Caption: "3",
-	// 	Data:    50,
-	// })
 }
