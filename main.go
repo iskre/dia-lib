@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	i := core.Isrke{}
+	i := core.Iskre{}
 	fmt.Println(i.Sequence("First", "Second", "Third", "massive long Sequence"))
 	// i.Pie(&core.PieEntry{
 	// 	Caption: "1",

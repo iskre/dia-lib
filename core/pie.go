@@ -7,7 +7,7 @@ type PieEntry struct {
 }
 
 // calculates the proportions each datapoint occupies and returns a pie chart accordingly
-func (i Isrke) Pie(d ...*PieEntry) string {
+func (i Iskre) Pie(d ...*PieEntry) string {
 	total := 0.0
 	for _, e := range d {
 		total += e.Data

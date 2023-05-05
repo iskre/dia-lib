@@ -1,3 +1,4 @@
+// contains control flow diagrams
 package core
 
 import "strings"
@@ -16,13 +17,15 @@ import "strings"
 //	├─────────────────────────┤
 //	│  massive long Sequence  │
 //	└─────────────────────────┘
-func (i Isrke) Sequence(d ...string) string {
+func (i Iskre) Sequence(d ...string) string {
+	// keep track of the longest string, to resize the table accordingly
 	m := 0
 	for _, e := range d {
 		if len(e) > m {
 			m = len(e)
 		}
 	}
+	// add padding before and after
 	m += 4
 
 	b := strings.Builder{}
