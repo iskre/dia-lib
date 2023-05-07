@@ -15,6 +15,9 @@ ascii generation library for the iskre cli tool
 - [ ] mind map
 - [ ] state diagram
 - [ ] gannt diagram
+- [ ] Bar Charts
+  - [x] horizontal
+  - [ ] vertical
 
 ## Showcase
 
