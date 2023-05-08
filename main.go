@@ -4,10 +4,15 @@ import (
 	"fmt"
 
 	"github.com/iskre/lib/core"
+	"github.com/iskre/lib/helper"
 )
 
 func main() {
 	i := core.Iskre{}
+	fmt.Println("Box example: ")
+	r, _ := helper.Box("title\nsubtitle")
+	fmt.Println(r)
+
 	fmt.Println("Repetition example: ")
 	fmt.Println(i.Repetition("While loop conditiontest", "test\n test\n  test\ntest"))
 

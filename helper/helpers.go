@@ -12,9 +12,15 @@ func RepeatRune(c rune, n int) string {
 	return b.String()
 }
 
-// builds a box around the given content, supports linebreaks, tabs, etc. Returns the length of the longest row
+// builds a box around the given content, supports linebreaks, tabs, etc. Returns the box and the length of the longest row
 //
-//	fmt.Println(box("string\n\tstring\t\ntest"))
+//	 r, _ := helper.Box("title\nsubtitle")
+//	 fmt.Println(r)
+//
+//		┌────────────┐
+//		│  title     │
+//		│  subtitle  │
+//		└────────────┘
 func Box(content string) (string, int) {
 	b := strings.Builder{}
 	content = strings.ReplaceAll(content, "\t", "  ")
