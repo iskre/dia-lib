@@ -33,7 +33,16 @@ func main() {
 		Data:    50,
 	}))
 
-	fmt.Println("Table example:")
+	fmt.Println("\nHorizontal Bar Chart example:")
+	fmt.Println(i.HorizontalBarChart(&core.BarChartEntry{
+		Caption: "Likes Java",
+		Data:    8,
+	}, &core.BarChartEntry{
+		Caption: "Likes Go",
+		Data:    92,
+	}))
+
+	fmt.Println("\nTable example:")
 	fmt.Println(i.Table(&core.Table{
 		Headers: []string{"THE FIRST IS VERY LONG", "Second", "THE THIRD ALSO"},
 		Body: [][]string{
