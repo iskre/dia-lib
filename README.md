@@ -69,7 +69,7 @@ func main(){
     i := core.Iskre{}
 
     // all methods return strings
-	diagram := i.Repetition("While loop conditiontest", "test\n test\n  test\ntest")
+    diagram := i.Repetition("While loop conditiontest", "test\n test\n  test\ntest")
 
     fmt.Println(diagram)
 }
