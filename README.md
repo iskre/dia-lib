@@ -19,6 +19,7 @@ ascii generation library for the iskre cli tool
 - [ ] flow chart
 - [x] tables
 - [ ] mind map
+- [x] scatter diagram
 - [ ] state diagram
 - [ ] gannt diagram
 
@@ -65,6 +66,29 @@ ascii generation library for the iskre cli tool
 │ Test1       │ Test2        │ Test3       │
 │ Test1       │ Test2        │ Test3       │
 └─────────────┴──────────────┴─────────────┘
+```
+
+### Scatter
+
+```text
+┌─────────┐
+│  Title  │
+└─────────┘
+                    CaptionX
+
+ 0     2     4     6     8    10    12
+   ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◽ ◾ ◾ ◾
+ 2 ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+   ◾ ◽ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+ 4 ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+   ◾ ◾ ◾ ◾ ◽ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+ 6 ◾ ◾ ◾ ◾ ◾ ◽ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+   ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+ 8 ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◽ ◾ ◾ ◾ ◾ ◾
+   ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+10 ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+   ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+CaptionY
 ```
 
 ## Usage
