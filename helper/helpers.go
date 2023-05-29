@@ -4,6 +4,7 @@ import (
 	"strings"
 )
 
+// returns rune c repeated n times as a string
 func RepeatRune(c rune, n int) string {
 	b := strings.Builder{}
 	for i := 0; i < n; i++ {
