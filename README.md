@@ -4,6 +4,12 @@ ascii generation library for the iskre cli tool
 
 ## Features
 
+### Generic
+
+- [x] Boxes
+
+### Diagrams
+
 - [ ] pie chart
 - [ ] ven diagram
 - [ ] control flow diagrams
@@ -17,6 +23,15 @@ ascii generation library for the iskre cli tool
 - [ ] gannt diagram
 
 ## Showcase
+
+### Generic
+
+```text
+┌────────────┐
+│  title     │
+│  subtitle  │
+└────────────┘
+```
 
 ### Control flow
 
