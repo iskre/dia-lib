@@ -17,35 +17,35 @@ type ScatterChart struct {
 
 // generates a scatter diagram
 //
-//			fmt.Println(i.Scatter(core.ScatterChart{
-//			    CaptionX: "CaptionX",
-//			    CaptionY: "CaptionY",
-//			    Title:    "Title",
-//			    Data: [][]float64{
-//		            {2, 1},
-//		            {4, 4},
-//		            {5, 5},
-//		            {7, 7},
-//		            {0, 9},
-//				    },
-//			}))
+//		fmt.Println(i.Scatter(core.ScatterChart{
+//		    CaptionX: "CaptionX",
+//		    CaptionY: "CaptionY",
+//		    Title:    "Title",
+//		    Data: [][]float64{
+//		        {2, 1},
+//		        {4, 4},
+//		        {5, 5},
+//		        {7, 7},
+//		        {0, 9},
+//			    },
+//		}))
 //	    // ┌─────────┐
 //	    // │  Title  │
 //	    // └─────────┘
 //	    //                     CaptionX
 //	    //
 //	    //  0     2     4     6     8    10    12
-//	    //    ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◽ ◾ ◾ ◾
-//	    //  2 ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
-//	    //    ◾ ◽ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
-//	    //  4 ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
-//	    //    ◾ ◾ ◾ ◾ ◽ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
-//	    //  6 ◾ ◾ ◾ ◾ ◾ ◽ ◾ ◾ ◾ ◾ ◾ ◾ ◾
-//	    //    ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
-//	    //  8 ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◽ ◾ ◾ ◾ ◾ ◾
-//	    //    ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
-//	    // 10 ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
-//	    //    ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾ ◾
+//	    //                      ○
+//	    //  2
+//	    //      ○
+//	    //  4
+//	    //            ○
+//	    //  6           ○
+//	    //
+//	    //  8               ○
+//	    //
+//	    // 10
+//	    //
 //	    // CaptionY
 func (i *Iskre) Scatter(d ScatterChart) string {
 	b := strings.Builder{}
